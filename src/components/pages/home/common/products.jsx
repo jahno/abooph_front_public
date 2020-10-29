@@ -20,9 +20,9 @@ class SpecialProducts extends Component {
                     <div className="container">
                         <Tabs className="theme-tab">
                             <TabList className="tabs tab-title">
-                                <Tab>Homme</Tab>
-                                <Tab>Femme</Tab>
-                                <Tab>Enfant</Tab>
+                                <Tab style={{cursor: 'pointer'}}>Homme</Tab>
+                                <Tab style={{cursor: 'pointer'}}>Femme</Tab>
+                                <Tab style={{cursor: 'pointer'}}>Enfant</Tab>
                             </TabList>
 
                             <TabPanel>

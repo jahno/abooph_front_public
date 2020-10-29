@@ -96,7 +96,7 @@ class Filter extends Component {
                                                                 checked={childCategories.findIndex(cat => cat.id == child.id) != -1} 
                                                                 className="custom-control-input" 
                                                                 id={child.id} 
-                                                                disabled={child.parent_id!= parentCategory.id} 
+                                                                // disabled={child.parent_id!= parentCategory.id} 
                                                             />
 
                                                             <label className="custom-control-label" htmlFor={child.id}>

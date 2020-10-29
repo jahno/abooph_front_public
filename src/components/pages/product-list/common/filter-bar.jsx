@@ -47,7 +47,7 @@ class FilterBar extends Component {
                 <div className="search-count">
                     <h5>Affichage des produits 1-{this.props.products.length} Résultat</h5>
                 </div>
-                <div className="collection-view">
+                {/* <div className="collection-view">
                     <ul>
                         <li><i
                             className="fa fa-th grid-layout-view" onClick={this.gridLayout}></i>
@@ -99,6 +99,7 @@ class FilterBar extends Component {
                         })}
                     </select>
                 </div>
+             */}
             </div>
         )
     }

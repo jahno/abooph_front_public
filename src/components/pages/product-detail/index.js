@@ -129,7 +129,7 @@ function ProductSeatil(props) {
                                                     </div>
                                                 )}
                                             </Slider>
-                                            {state.product.images.length > 1 && <SmallImages item={state.product} settings={productsnav} navOne={state.nav1} />}
+                                            {/* {state.product.images.length > 1 && <SmallImages item={state.product} settings={productsnav} navOne={state.nav1} />} */}
                                         </div>
                                         <DetailsWithPrice item={state.product} navOne={state.nav1} addToCartClicked={addToCart} BuynowClicked={addToCartUnsafe}/>
                                     </div>

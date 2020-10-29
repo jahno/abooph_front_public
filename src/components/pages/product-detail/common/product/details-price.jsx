@@ -68,8 +68,8 @@ class DetailsWithPrice extends Component {
                         </div>
                     </div>
                     <div className="product-buttons" >
-                        <a className="btn btn-solid" onClick={() => addToCartClicked(item, this.state.quantity)}>panier</a>
-                        <Link to={`${process.env.PUBLIC_URL}/checkout`} className="btn btn-solid" onClick={() => BuynowClicked(item, this.state.quantity)} >achter</Link>
+                        <a className="btn btn-solid" onClick={() => addToCartClicked(item, this.state.quantity)}>Ajouter au panier</a>
+                        <Link to={`${process.env.PUBLIC_URL}/caisse`} className="btn btn-solid" onClick={() => BuynowClicked(item, this.state.quantity)} >achter</Link>
                     </div>
                     <div className="border-product">
                         <h6 className="product-title">détail</h6>
