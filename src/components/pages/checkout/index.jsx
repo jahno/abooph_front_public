@@ -154,7 +154,7 @@ function CheckOut(props){
                                                         placeholder="Votre téléphone" 
                                                         validate={{
                                                             required: {value: true, errorMessage: 'Svp veuillez renseigner votre numéro de téléphone'},
-                                                            pattern: {value: '^[0-9]{8}$', errorMessage: "Numéro invalide"},
+                                                            // pattern: {value: '^[0-9]{8}$', errorMessage: "Numéro invalide"},
                                                         }} 
                                                     />
                                                 </div>

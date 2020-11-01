@@ -7,6 +7,8 @@ import { IntlProvider } from 'react-redux-multilingual'
 import { ToastContainer } from 'react-toastify';
 
 import './index.scss';
+import 'antd/dist/antd.css';
+
 import Layout from 'components/app'
 import Home from 'components/pages/home';
 import ProductList from 'components/pages/product-list'
