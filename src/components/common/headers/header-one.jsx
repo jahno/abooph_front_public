@@ -85,7 +85,7 @@ class HeaderOne extends Component {
 					{this.state.isLoading ? <Pace color="#27ae60"/> : null}
 					<div className="mobile-fix-option"></div>
 					{/*Top Header Component*/}
-					<TopBar/>
+					<TopBar auth={this.props.auth}/>
 
 					<div className="container">
 						<div className="row">
@@ -147,6 +147,8 @@ class HeaderOne extends Component {
 	}
 }
 
-export default connect(null,
-    { changeCurrency }
-)(HeaderOne);
+const mapStateToProps = (state) => ({
+    auth: state.auth
+})
+
+export default connect(mapStateToProps, { changeCurrency })(HeaderOne);

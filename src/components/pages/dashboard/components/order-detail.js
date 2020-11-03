@@ -144,10 +144,9 @@ function OrderDetail() {
                         <div className="row">
                             <div className="col-sm-12">
 
-                            <Steps direction='horizontal' current={1}>
-                                <Step title="Finished" description="This is a description." />
-                                <Step title="In Progress" description="This is a description." />
-                                <Step title="Waiting" description="This is a description." />
+                            <Steps direction='horizontal' current={state.order.etat != 0 ? 1 : 0}>
+                                <Step title="Etape 1" description="confection en cours..." />
+                                <Step title="Etape 2" description="Confection terminée" />
                             </Steps>
                             </div>
                         </div>

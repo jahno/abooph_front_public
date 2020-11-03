@@ -4,7 +4,7 @@ import { withTranslate } from 'react-redux-multilingual'
 
 function TopBar(props){
 
-    const {translate} = props;
+    const {translate, auth} = props;
     return (
         <div className="top-header">
             <div className="container">
@@ -22,15 +22,23 @@ function TopBar(props){
                             {/* <li className="mobile-wishlist compare-mobile"><Link to={`/compare`}><i className="fa fa-random" aria-hidden="true"></i>{translate('compare')}</Link></li>
                             <li className="mobile-wishlist"><Link to={`/wishlist`}><i className="fa fa-heart" aria-hidden="true"></i>{translate('wishlist')}</Link></li> */}
                             <li className="onhover-dropdown mobile-account">
-                                <i className="fa fa-user" aria-hidden="true"></i> Mon compte
-                                <ul className="onhover-show-div">
-                                    <li>
-                                        <Link to={`/connexion`} data-lng="en">Connexion</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/inscription`} data-lng="en">Inscription</Link>
-                                    </li>
-                                </ul>
+                                {(auth && auth.isAuthenticated) ? (
+                                    <Link to={`/connexion`} data-lng="en">
+                                        <i className="fa fa-user" aria-hidden="true"></i> {auth.user.nom}
+                                    </Link>
+                                ): (
+                                    <>
+                                        <i className="fa fa-user" aria-hidden="true"></i> Mon compte
+                                        <ul className="onhover-show-div">
+                                            <li>
+                                                <Link to={`/connexion`} data-lng="en">Connexion</Link>
+                                            </li>
+                                            <li>
+                                                <Link to={`/inscription`} data-lng="en">Inscription</Link>
+                                            </li>
+                                        </ul>
+                                    </>
+                                )}
                             </li>
                         </ul>
                     </div>

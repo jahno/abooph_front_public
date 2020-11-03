@@ -1,34 +1,36 @@
 import React from 'react';
 
-// import {connect} from "react-redux";
+import { connect } from 'react-redux';
 
 function Dashboard(props) {
+    const { user } = props
+
     return (
         <>
             <div className="page-title">
-                <h2>My Dashboard</h2>
+                <h2>Dashboard</h2>
             </div>
             <div className="welcome-msg">
-                <p>Hello, MARK JECNO !</p>
+                <p>Bonjour, {user.nom} {user.prenom} !</p>
                 <p>From your My Account Dashboard you have the ability to view a snapshot of
                     your recent account activity and update your account information. Select
                     a link below to view or edit information.</p>
             </div>
             <div className="box-account box-info">
                 <div className="box-head">
-                    <h2>Account Information</h2>
+                    <h2>Mon compte</h2>
                 </div>
                 <div className="row">
                     <div className="col-sm-6">
                         <div className="box">
                             <div className="box-title">
-                                <h3>Contact Information</h3>
-                                <a href="#">Edit</a>
+                                <h3>Informations</h3>
+                                <a href="#">Modifier</a>
                             </div>
                             <div className="box-content">
-                                <h6>MARK JECNO</h6>
-                                <h6>MARk-JECNO@gmail.com</h6>
-                                <h6><a href="#">Change Password</a></h6>
+                                <h6>{user.nom} {user.prenom}</h6>
+                                <h6>{user.email}</h6>
+                                <h6><a href="#">Modifier mot de passe</a></h6>
                             </div>
                         </div>
                     </div>
@@ -36,7 +38,7 @@ function Dashboard(props) {
                         <div className="box">
                             <div className="box-title">
                                 <h3>Newsletters</h3>
-                                <a href="#">Edit</a>
+                                <a href="#">Modifier</a>
                             </div>
                             <div className="box-content">
                                 <p>
@@ -75,4 +77,8 @@ function Dashboard(props) {
     )
 }
 
-export default Dashboard;
+const mapStateToProps = (state) => ({
+    user: state.auth.user
+})
+
+export default connect(mapStateToProps)(Dashboard);
