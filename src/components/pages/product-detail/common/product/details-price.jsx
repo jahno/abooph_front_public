@@ -50,14 +50,18 @@ class DetailsWithPrice extends Component {
                     <h2> {item.nom} </h2>
                     <h4><del>{item.prix} F</del> {item.prix} F</h4>
                     <div className="product-description border-product">
+                        <h6 className="product-title">couturier</h6>
+                        <Link to={`${process.env.PUBLIC_URL}/couturier/${item.couturier_id}`} style={{color: 'red', cursor: 'pointer'}}>{item.couturier.nom} {item.couturier.prenom}</Link>
+                        <br/><br/>
+
                         <h6 className="product-title">quantité</h6>
                         <div className="qty-box">
                             <div className="input-group">
-                                  <span className="input-group-prepend">
+                                <span className="input-group-prepend">
                                     <button type="button" className="btn quantity-left-minus" onClick={this.minusQty} data-type="minus" data-field="">
                                      <i className="fa fa-angle-left"></i>
                                     </button>
-                                  </span>
+                                </span>
                                 <input type="text" name="quantity" value={this.state.quantity} onChange={this.changeQty} className="form-control input-number" />
                                 <span className="input-group-prepend">
                                 <button type="button" className="btn quantity-right-plus" onClick={this.plusQty} data-type="plus" data-field="">

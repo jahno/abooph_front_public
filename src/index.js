@@ -12,6 +12,7 @@ import 'antd/dist/antd.css';
 import Layout from 'components/app'
 import Home from 'components/pages/home';
 import ProductList from 'components/pages/product-list'
+import DressmakerProductList from 'components/pages/dressmaker-product-list'
 import productDetail from "components/pages/product-detail";
 import AboutUs from 'components/pages/about-us'
 import Contact from 'components/pages/contact'
@@ -42,6 +43,7 @@ class Root extends React.Component {
                                 {/* public route */}
                                 <Route exact path={`/`} component={Home}/>
                                 <Route exact path={`/galerie`} component={ProductList}/>
+                                <Route exact path={`/couturier/:id`} component={DressmakerProductList}/>
 								<Route exact path={`/article/:id`} component={productDetail}/>
                                 <Route path={`/a-propos`} component={AboutUs}/>
                                 <Route path={`/contact`} component={Contact}/>

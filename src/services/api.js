@@ -71,3 +71,8 @@ export function getOrderDetail(orderId,sCallBack,eCallBack){
     const url = `${API_ROUTE}/user/commande/${orderId}`
     exeRequest(url,"GET",null,sCallBack,eCallBack)
 }
+
+export function getDressmakerProducts(dressmakerId,sCallBack,eCallBack){
+    const url = `${API_ROUTE}/user/articles/couturier/${dressmakerId}`
+    exeRequest(url,"GET",null,sCallBack,eCallBack)
+}
