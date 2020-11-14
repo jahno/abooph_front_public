@@ -508,7 +508,7 @@ class ThemeSettings extends Component {
                             <div className="buy_btn">
                                 <a href="https://themeforest.net/item/multikart-responsive-react-ecommerce-template/23067773?s_rank=1"
                                    target="_blank" className="btn btn-block purchase_btn">
-                                    <i className="fa fa-shopping-cart" aria-hidden="true"></i> purchase Multikart now!</a>
+                                    <i className="fa fa-shopping-cart" style={{fontSize: 25}} aria-hidden="true"></i> purchase Multikart now!</a>
                                 <a href="https://themeforest.net/item/multikart-responsive-angular-ecommerce-template/22905358?s_rank=3"
                                    target="_blank" className="btn btn-block purchase_btn">
                                     <img src={`${process.env.PUBLIC_URL}/assets/images/icon/angular.png`} alt="" className="img-fluid" /> Multikart Angular</a>

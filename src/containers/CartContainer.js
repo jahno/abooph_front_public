@@ -9,7 +9,7 @@ import {getCartTotal} from 'services'
 const CartContainer = ({cartList, total, removeFromCart}) => (
      <li  className="onhover-div mobile-cart"><div className="cart-qty-cls">{cartList.length}</div>
         <Link to={`${process.env.PUBLIC_URL}/cart`}><img src={`${process.env.PUBLIC_URL}/assets/images/icon/cart.png`} className="img-fluid" alt=""/>
-            <i className="fa fa-shopping-cart"></i></Link>
+            <i className="fa fa-shopping-cart" style={{fontSize: 25}}></i></Link>
         <ul className="show-div shopping-cart">
             { cartList.map((item,index) => (
                 <CartPage key={index} item={item} total={total} removeFromCart={() => removeFromCart(item)}  />

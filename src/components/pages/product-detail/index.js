@@ -40,7 +40,7 @@ function ProductSeatil(props) {
                 () => setState(state => ({...state, isLoading: false}))
             )
         }
-    }, [])
+    }, [params.id])
 
     useEffect(() => {
         setState(state => ({

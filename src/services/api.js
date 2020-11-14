@@ -7,7 +7,7 @@ export const API_ROUTE = 'http://91.234.195.219:3333/v1';
 export const ARTICLES_IMAGES_ROUTE =  PUBLIC_ROUTE;
 
 const toastConfig = {
-    autoClose: false
+    autoClose: true
 }
 
 const request = (options) => {
@@ -75,4 +75,14 @@ export function getOrderDetail(orderId,sCallBack,eCallBack){
 export function getDressmakerProducts(dressmakerId,sCallBack,eCallBack){
     const url = `${API_ROUTE}/user/articles/couturier/${dressmakerId}`
     exeRequest(url,"GET",null,sCallBack,eCallBack)
+}
+
+export function getCategories(sCallBack,eCallBack){
+    const url = `${API_ROUTE}/categoriearticle/children`
+    exeRequest(url,"GET",null,sCallBack,eCallBack)
+}
+
+export function postNewsletter(data,sCallBack,eCallBack){
+    const url = `${API_ROUTE}/user/newsletter`
+    exeRequest(url,"POST",data,sCallBack,eCallBack)
 }

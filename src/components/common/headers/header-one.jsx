@@ -97,7 +97,7 @@ class HeaderOne extends Component {
 												<div className="bar-style"> <i className="fa fa-bars sidebar-bar" aria-hidden="true"></i></div>
 											</a>
 											{/*SideBar Navigation Component*/}
-											{/* <SideBar/> */}
+											<SideBar categories={this.props.categories}/>
 										</div>
 										<div className="brand-logo">
 											<LogoImage logo={this.props.logoName} />

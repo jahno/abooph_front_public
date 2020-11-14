@@ -115,9 +115,9 @@ function CheckOut(props){
                                 <form>
                                     <div className="checkout row">
                                         <div className="col-lg-6 col-sm-12 col-xs-12">
-                                            <div className="checkout-title">
+                                            {/* <div className="checkout-title">
                                                 <h3>Détail de la caisse</h3>
-                                            </div>
+                                            </div> */}
                                             <div className="row check-out">
                                                 <div className="form-group col-md-6 col-sm-12 col-xs-12">
                                                     <div className="field-label">Nom</div>
@@ -252,8 +252,13 @@ function CheckOut(props){
                                             </div>
                                         </div>
                                         
-                                        <div className="col-lg-6 col-sm-12 col-xs-12"><br/><br/><br/><br/>
+                                        <div className="col-lg-6 col-sm-12 col-xs-12">
+                                            <div className="checkout-title">
+                                                <h3>Détail de la caisse</h3>
+                                            </div>
                                             <div className="checkout-details">
+                                                
+
                                                 <div className="order-box">
                                                     <div className="title-box">
                                                         <div>Article <span> Total</span></div>

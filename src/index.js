@@ -47,7 +47,6 @@ class Root extends React.Component {
 								<Route exact path={`/article/:id`} component={productDetail}/>
                                 <Route path={`/a-propos`} component={AboutUs}/>
                                 <Route path={`/contact`} component={Contact}/>
-                                <Route path={`/caisse`} component={CheckOut}/>
 								<Route path={`/cart`} component={Cart}/>
 
                                 {/*Auth pages*/}
@@ -57,6 +56,7 @@ class Root extends React.Component {
                                 <Route exact path={`/nouveau-mot-de-passe/:token`} component={PasswordReset}/>
 
                                 {/* private route */}
+                                <PrivateRoute path={`/caisse`} component={CheckOut}/>
                                 <PrivateRoute path={`/mon-compte`} component={Dashboard}/>
                             </Layout>
                          </Switch>

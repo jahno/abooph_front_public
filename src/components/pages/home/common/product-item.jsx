@@ -67,7 +67,7 @@ class ProductItem extends Component {
                         </div>
                         <div className="cart-info cart-wrap">
                             <button title="Ajouter au panier" onClick={onAddToCartClicked}>
-                                <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <i className="fa fa-shopping-cart" style={{fontSize: 25}} aria-hidden="true"></i>
                             </button>
 
                             {/* <a href="javascript:void(0)" title="Add to Wishlist" onClick={onAddToWishlistClicked}>
@@ -77,7 +77,7 @@ class ProductItem extends Component {
                             <a href="javascript:void(0)" data-toggle="modal"
                                data-target="#quick-view"
                                title="Aperçu rapide"
-                               onClick={this.onOpenModal}><i className="fa fa-search" aria-hidden="true"></i>
+                               onClick={this.onOpenModal}><i className="fa fa-search" style={{fontSize: 25}} aria-hidden="true"></i>
                             </a>
 
                             {/* <Link to={`${process.env.PUBLIC_URL}/compare`} title="Compare" onClick={onAddToCompareClicked}>

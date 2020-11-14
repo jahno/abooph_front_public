@@ -15,20 +15,23 @@ function NewProduct(){
     useEffect(() => {
         const { method, url } = last_articles
         handleFetch(method, url(), (response) => {
-            setState(state => ({...state, newProducts: response.results}))
+            let newProducts = [];
+            while (response.results.length > 0) {
+                newProducts.push(response.results.splice(0, 3));
+            }
+
+            setState(state => ({
+                ...state, 
+                newProducts
+            }))
         })
     }, [])
-
-    var arrays = [];
-    while (state.newProducts.length > 0) {
-        arrays.push(state.newProducts.splice(0, 3));
-    }
 
     return (
         <div className="theme-card">
             <h5 className="title-border">derniers articles</h5>
             <Slider className="offer-slider slide-1">
-                {arrays.map((products, index) =>
+                {state.newProducts.map((products, index) =>
                     <div key={index}>
                         {products.map((product, i) =>
                             <div className="media" key={i}>
