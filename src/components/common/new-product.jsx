@@ -46,7 +46,7 @@ function NewProduct(){
                                     </div>
                                     <Link to={`${process.env.PUBLIC_URL}/article/${product.id}`}><h6>{product.nom}</h6></Link>
                                     <h4>{(product.prix)} F
-                                        <del><span className="money">{product.prix} F</span></del></h4>
+                                        <del><span className="money">{product.prix_barre} F</span></del></h4>
                                 </div>
                             </div>
                         )}

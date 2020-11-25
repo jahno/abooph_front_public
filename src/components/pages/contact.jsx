@@ -33,28 +33,28 @@ class Contact extends Component {
                                                     <h6>Contact</h6>
                                             </div>
                                             <div className="media-body">
-                                                <p>+225 08 74 59 49</p>
+                                                {/* <p>+225 08 74 59 49</p> */}
                                                 <p>+225 08 74 59 49</p>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="contact-icon">
                                                 <i className="fa fa-map-marker" aria-hidden="true"></i>
-                                                <h6>Address</h6>
+                                                <h6>Adresse</h6>
                                             </div>
                                             <div className="media-body">
-                                                <p>ABC Complex,Near xyz, New York</p>
-                                                <p>USA 123456</p>
+                                                {/* <p>ABC Complex,Near xyz, New York</p> */}
+                                                <p>2 Plateau</p>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="contact-icon">
                                                 <img src={`${process.env.PUBLIC_URL}/assets/images/icon/email.png`} alt="Generic placeholder image" />
-                                                    <h6>Adresse</h6>
+                                                    <h6>Email</h6>
                                             </div>
                                             <div className="media-body">
-                                                <p>Support@Shopcart.com</p>
-                                                <p>info@shopcart.com</p>
+                                                <p>abooph@gmail.Com</p>
+                                                {/* <p>info@shopcart.com</p> */}
                                             </div>
                                         </li>
                                         <li>
@@ -63,8 +63,8 @@ class Contact extends Component {
                                                 <h6>Fax</h6>
                                             </div>
                                             <div className="media-body">
-                                                <p>Support@Shopcart.com</p>
-                                                <p>info@shopcart.com</p>
+                                                <p>21202452</p>
+                                                {/* <p>info@shopcart.com</p> */}
                                             </div>
                                         </li>
                                     </ul>

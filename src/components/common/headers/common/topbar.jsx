@@ -12,7 +12,7 @@ function TopBar(props){
                     <div className="col-lg-6">
                         <div className="header-contact">
                             <ul>
-                                <li>Bienvenue sur abooph</li>
+                                {/* <li>Bienvenue sur abooph</li> */}
                                 <li><i className="fa fa-phone" aria-hidden="true"></i>Contacter nous:  08 74 59 49</li>
                             </ul>
                         </div>

@@ -56,8 +56,7 @@ function FooterOne(props){
                                 <div className="footer-logo">
                                     <LogoImage logo={props.logoName} />
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
+                                <p>Abooph est une plateforme de confection de vêtements sur mesure qui met en avant les productions africaines</p>
                                 <div className="footer-social">
                                     <ul>
                                         <li>
@@ -82,19 +81,19 @@ function FooterOne(props){
                         <div className="col offset-xl-1">
                             <div className="sub-title">
                                 <div className="footer-title">
-                                    <h4>my account</h4>
+                                    <h4>compte</h4>
                                 </div>
                                 <div className="footer-contant">
                                     <ul>
-                                        <li><Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} >womens</Link></li>
-                                        <li><Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} >clothing</Link></li>
-                                        <li><Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} >accessories</Link></li>
-                                        <li><Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} >featured</Link></li>
+                                        <li><Link to={`${process.env.PUBLIC_URL}/inscription`} >inscription</Link></li>
+                                        <li><Link to={`${process.env.PUBLIC_URL}/connexion`} >connexion</Link></li>
+                                        {/* <li><Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} >accessories</Link></li>
+                                        <li><Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} >featured</Link></li> */}
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div className="col">
+                        {/* <div className="col">
                             <div className="sub-title">
                                 <div className="footer-title">
                                     <h4>why we choose</h4>
@@ -109,21 +108,19 @@ function FooterOne(props){
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         <div className="col">
                             <div className="sub-title">
                                 <div className="footer-title">
-                                    <h4>store information</h4>
+                                    <h4>information</h4>
                                 </div>
                                 <div className="footer-contant">
                                     <ul className="contact-list">
-                                        <li><i className="fa fa-map-marker"></i>Multikart Demo Store, Demo store
-                                            India 345-659
-                                        </li>
-                                        <li><i className="fa fa-phone"></i>Call Us: 123-456-7898</li>
-                                        <li><i className="fa fa-envelope-o"></i>Email Us: <a
-                                            href="#">Support@Fiot.com</a></li>
-                                        <li><i className="fa fa-fax"></i>Fax: 123456</li>
+                                        <li><i className="fa fa-map-marker"></i>2 Plateau</li>
+                                        <li><i className="fa fa-phone"></i>Contact: 08745949</li>
+                                        <li><i className="fa fa-envelope-o"></i>Email: <a
+                                            href="#">abooph@gmail.com</a></li>
+                                        <li><i className="fa fa-fax"></i>Fax: 21202452</li>
                                     </ul>
                                 </div>
                             </div>

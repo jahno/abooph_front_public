@@ -66,7 +66,7 @@ class aboutUs extends Component {
                                 </div>
                             </div>
                             <div className="col-sm-12">
-                                <h4>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                {/* <h4>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
                                     doloremque laudantium</h4>
                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
                                     laudantium,</p>
@@ -82,13 +82,27 @@ class aboutUs extends Component {
                                     frequently occur that pleasures have to be repudiated and annoyances accepted. The
                                     wise man therefore always holds in these matters to this principle of selection: he
                                     rejects pleasures to secure other greater pleasures, or else he endures pains to
-                                    avoid worse pains.</p>
+                                    avoid worse pains.</p> */}
+
+                                    <h4>Présentation de Abooph</h4>
+
+                                    <p>Notre mission est d’améliorer le quotidien du continent africain en proposant aux consommateurs des services innovants de couture sur mesure en ligne, tout en soutenant le développement d’entreprises ayant recours à notre plateforme pour satisfaire leurs clients.</p>
+                                   
+                                    <p>Notre plateforme réunit une <strong>MarketPlace</strong>, qui connecte vendeurs (Couturiers professionnel, créateur de mode et tendance, marques etc…) et acheteurs, un réseau logistique, qui permet la livraison de colis.</p>
+                                    
+                                    <p>Nous proposons à nos clients une large gamme de produits à des prix discount et des délais de livraison réduits, dans le but d'offrir une expérience conviviale et de qualité.</p>
+                                    
+                                    <p>Notre objectif est de valoriser la culture de la mode ainsi que la couture sur mesure en réduisant les temps de confection.</p>
+                                    
+                                    <p>Avec Abooph, la couture sur mesure est en un clic chez vous !</p>
+
                             </div>
                         </div>
                     </div>
                 </section>
 
                 {/*Testimonial*/}
+                {/*
                 <section className="testimonial small-section">
                     <div className="container">
                         <div className="row">
@@ -183,8 +197,10 @@ class aboutUs extends Component {
                         </div>
                     </div>
                 </section>
-
+                */}
+                
                 {/*Team Section*/}
+                {/*
                 <section id="team" className="team section-b-space">
                     <div className="container">
                         <div className="row">
@@ -221,6 +237,7 @@ class aboutUs extends Component {
                         </div>
                     </div>
                 </section>
+                */}
 
                 {/*service layout*/}
                 {/*

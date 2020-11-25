@@ -48,7 +48,7 @@ class DetailsWithPrice extends Component {
             <div className="col-lg-6 rtl-text">
                 <div className="product-right">
                     <h2> {item.nom} </h2>
-                    <h4><del>{item.prix} F</del> {item.prix} F</h4>
+                    <h4><del>{item.prix_barre} F</del> {item.prix} F</h4>
                     <div className="product-description border-product">
                         <h6 className="product-title">couturier</h6>
                         <Link to={`${process.env.PUBLIC_URL}/couturier/${item.couturier_id}`} style={{color: 'red', cursor: 'pointer'}}>{item.couturier.nom} {item.couturier.prenom}</Link>
@@ -73,7 +73,7 @@ class DetailsWithPrice extends Component {
                     </div>
                     <div className="product-buttons" >
                         <a className="btn btn-solid" onClick={() => addToCartClicked(item, this.state.quantity)}>Ajouter au panier</a>
-                        <Link to={`${process.env.PUBLIC_URL}/caisse`} className="btn btn-solid" onClick={() => BuynowClicked(item, this.state.quantity)} >achter</Link>
+                        <Link to={`${process.env.PUBLIC_URL}/caisse`} className="btn btn-solid" onClick={() => BuynowClicked(item, this.state.quantity)} >acheter</Link>
                     </div>
                     <div className="border-product">
                         <h6 className="product-title">détail</h6>

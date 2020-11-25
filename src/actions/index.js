@@ -80,6 +80,14 @@ export function addToCart (product,qty){
     }
 } 
 
+export function initCart (){
+    return dispatch => {
+        dispatch({
+            type: types.INIT_CART
+        })
+    }
+} 
+
 export const addToCartAndRemoveWishlist = (product,qty) => (dispatch) => {
     toast.success("Article ajouté au panier");
     dispatch(addToCartUnsafe(product, qty));

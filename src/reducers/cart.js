@@ -1,5 +1,6 @@
 import {
     ADD_TO_CART,
+    INIT_CART,
     REMOVE_FROM_CART,
     // INCREMENT_QTY,
     DECREMENT_QTY 
@@ -48,7 +49,11 @@ export default function cartReducer(state = {cart: []}, action) {
             return {
                 cart: state.cart.filter(item => item.id !== action.product_id.id)
             }
-
+        
+        case INIT_CART:
+            return {
+                cart: []
+            }
         default:
     }
     return state;

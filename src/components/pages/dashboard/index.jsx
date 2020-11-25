@@ -55,9 +55,9 @@ function DashboardLayout(props) {
                             <div className="dashboard-right">
                                 <div className="dashboard">
                                     <Switch>
-                                        <Route exact path={path}>
+                                        {/* <Route exact path={path}>
                                             <Dashboard/>
-                                        </Route>
+                                        </Route> */}
 
                                         <Route exact path={`${path}/commandes`}>
                                             <Orders/>
@@ -67,7 +67,7 @@ function DashboardLayout(props) {
                                             <OrderDetail/>
                                         </Route>
 
-                                        <Redirect to={path}/>
+                                        <Redirect to={`${path}/commandes`}/>
                                     </Switch>
                                 </div>
                             </div>

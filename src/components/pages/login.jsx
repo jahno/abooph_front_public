@@ -7,7 +7,7 @@ import { Redirect, useLocation, Link } from 'react-router-dom';
 import Breadcrumb from "../common/breadcrumb";
 
 import {handleFetch} from '../../helpers';
-import { signIn } from '../../services/auth'
+// import { signIn } from '../../services/auth'
 import { signIn as signInUser } from '../../actions'
 import { login } from 'constants/urls';
 
@@ -103,9 +103,7 @@ function Login({signInUser, isAuthenticated}){
                             <h3>Nouveau client</h3>
                             <div className="theme-card authentication-right">
                                 <h6 className="title-font">Créer un compte</h6>
-                                <p>Sign up for a free account at our store. Registration is quick and easy. It
-                                    allows you to be able to order from our shop. To start shopping click
-                                    register.</p>
+                                <p>Inscrivez-vous. L'inscription est gratuite sur notre plateforme. L'inscription est simple et rapide. Cela vous permet de pouvoir commander dans notre boutique. Pour commencer vos achats, cliquez sur S'inscrire.</p>
                                 <Link to="/inscription" className="btn btn-solid">Créer un compte</Link>
                             </div>
                         </div>

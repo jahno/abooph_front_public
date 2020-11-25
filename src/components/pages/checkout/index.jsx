@@ -7,10 +7,11 @@ import { Button } from 'reactstrap';
 import { toast } from 'react-toastify';
 
 import Breadcrumb from "components/common/breadcrumb";
-import {removeFromWishlist} from 'actions'
+import {removeFromWishlist, initCart} from 'actions'
 import {getCartTotal} from "services";
 import {handleFetch} from 'helpers';
 import { order } from 'constants/urls';
+import { useHistory } from 'react-router-dom';
 
 
 const initialState = {
@@ -28,7 +29,8 @@ const initialState = {
 }
 
 function CheckOut(props){
-    const { cartItems, total, auth } = props
+    const { cartItems, total, auth, initCart } = props
+    const history = useHistory()
 
     const [state, setState] = useState(() => {
         let defaultValues = {...initialState.defaultValues}
@@ -81,7 +83,9 @@ function CheckOut(props){
                         position: toast.POSITION.TOP_RIGHT,
                         autoClose: false
                     });
-                    setState(state => ({...state, isLoading: false, newProducts: response.results}))
+                    // setState(state => ({...state, isLoading: false, newProducts: response.results}))
+                    initCart()
+                    history.push('/')
                 },
                 () => setState(state => ({...state, isLoading: false})),
                 data
@@ -375,5 +379,5 @@ const mapStateToProps = (state) => ({
 
 export default connect(
     mapStateToProps,
-    {removeFromWishlist}
+    {removeFromWishlist, initCart}
 )(CheckOut)

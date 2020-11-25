@@ -109,39 +109,42 @@ function Fashion(){
                 <div className="container">
                     <div className="row partition2">
                         <div className="col-md-4">
-                            <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}>
+                            <Link to={{pathname: '/galerie', state: 'homme'}}>
+                            {/* <Link to={`${process.env.PUBLIC_URL}/homme`}> */}
                                 <div className="collection-banner p-right text-center">
                                     <img src={`${process.env.PUBLIC_URL}/assets/images/sub-banner1.jpg`} className="img-fluid" alt=""/>
                                         <div className="contain-banner">
                                             <div>
                                                 <h4>30% reduction</h4>
-                                                <h2>homme</h2>
+                                                {/* <h2>homme</h2> */}
                                             </div>
                                         </div>
                                 </div>
                             </Link>
                         </div>
                         <div className="col-md-4">
-                            <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}>
+                            <Link to={{pathname: '/galerie', state: 'femme'}}>
+                            {/* <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}> */}
                                 <div className="collection-banner p-right text-center">
                                     <img src={`${process.env.PUBLIC_URL}/assets/images/sub-banner2.jpg`} className="img-fluid" alt=""/>
                                         <div className="contain-banner">
                                             <div>
                                                 <h4>60% reduction</h4>
-                                                <h2>femme</h2>
+                                                {/* <h2>femme</h2> */}
                                             </div>
                                         </div>
                                 </div>
                             </Link>
                         </div>
                         <div className="col-md-4">
-                            <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}>
+                            <Link to={{pathname: '/galerie', state: 'enfant'}}>
+                            {/* <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}> */}
                                 <div className="collection-banner p-right text-center">
-                                    <img src={`${process.env.PUBLIC_URL}/assets/images/sub-banner2.jpg`} className="img-fluid" alt=""/>
+                                    <img src={`${process.env.PUBLIC_URL}/assets/images/sub-banner4.jpg`} className="img-fluid" alt=""/>
                                         <div className="contain-banner">
                                             <div>
                                                 <h4>60% reduction</h4>
-                                                <h2>enfant</h2>
+                                                {/* <h2>enfant</h2> */}
                                             </div>
                                         </div>
                                 </div>
