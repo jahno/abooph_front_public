@@ -185,14 +185,14 @@ class SideBar extends Component {
                             <ul>
                                 {this.props.categories.map((category) => (
                                     <li>
-                                        <Link onClick={this.closeNav} to={{pathname: '/galerie', state: category.nom.toLowerCase()}}>
+                                        <Link onClick={this.closeNav} to={{pathname: '/galerie', state: {category: category.nom.toLowerCase()}}}>
                                             {category.nom}
                                         </Link>
                                     </li>
                                 ))}
                             </ul>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link to="#" onClick={(e) => this.handleSubmenu(e)}>
                                 Nos services
                                 <span className="sub-arrow"></span>
@@ -208,7 +208,7 @@ class SideBar extends Component {
                                     <Link to="#">precious jewellery</Link>
                                 </li>
                             </ul>
-                        </li>
+                        </li> */}
 
                         {/* <li>
                             <Link to="#" >house of design</Link>

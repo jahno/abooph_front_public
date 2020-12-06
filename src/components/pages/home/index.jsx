@@ -115,7 +115,7 @@ function Fashion(){
                                     <img src={`${process.env.PUBLIC_URL}/assets/images/sub-banner1.jpg`} className="img-fluid" alt=""/>
                                         <div className="contain-banner">
                                             <div>
-                                                <h4>30% reduction</h4>
+                                                {/* <h4>30% reduction</h4> */}
                                                 {/* <h2>homme</h2> */}
                                             </div>
                                         </div>
@@ -129,7 +129,7 @@ function Fashion(){
                                     <img src={`${process.env.PUBLIC_URL}/assets/images/sub-banner2.jpg`} className="img-fluid" alt=""/>
                                         <div className="contain-banner">
                                             <div>
-                                                <h4>60% reduction</h4>
+                                                {/* <h4>60% reduction</h4> */}
                                                 {/* <h2>femme</h2> */}
                                             </div>
                                         </div>
@@ -143,7 +143,7 @@ function Fashion(){
                                     <img src={`${process.env.PUBLIC_URL}/assets/images/sub-banner4.jpg`} className="img-fluid" alt=""/>
                                         <div className="contain-banner">
                                             <div>
-                                                <h4>60% reduction</h4>
+                                                {/* <h4>60% reduction</h4> */}
                                                 {/* <h2>enfant</h2> */}
                                             </div>
                                         </div>

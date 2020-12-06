@@ -9,7 +9,7 @@ import SideBar from "./common/sidebar";
 import CartContainer from "containers/CartContainer";
 import TopBar from "./common/topbar";
 import LogoImage from "./common/logo";
-import {changeCurrency} from 'actions'
+import {changeCurrency, logout} from 'actions'
 import {connect} from "react-redux";
 
 class HeaderOne extends Component {
@@ -76,8 +76,21 @@ class HeaderOne extends Component {
 			this.setState({isLoading: false})
 		})
 	};
-	
+    
+    onSearchSubmit = (e) => {
+        e.preventDefault()
+        this.closeSearch()
+        console.log(this.searchValue)
+        this.props.history.push('/galerie', {searchValue: this.searchValue})
+    }
+
+    onSearchChange = (e) => {
+        const { value } = e.target
+        this.searchValue = value
+    }
+    
 	render() {
+        console.log('history', this.props)
 
 		return (
 			<div>
@@ -85,7 +98,7 @@ class HeaderOne extends Component {
 					{this.state.isLoading ? <Pace color="#27ae60"/> : null}
 					<div className="mobile-fix-option"></div>
 					{/*Top Header Component*/}
-					<TopBar auth={this.props.auth}/>
+					<TopBar auth={this.props.auth} logout={this.props.logout}/>
 
 					<div className="container">
 						<div className="row">
@@ -110,6 +123,14 @@ class HeaderOne extends Component {
 										<div>
 											<div className="icon-nav">
 												<ul>
+                                                    <li className="onhover-div mobile-search">
+														<div>
+                                                            <img src={`${process.env.PUBLIC_URL}/assets/images/icon/search.png`} 
+                                                                onClick={this.openSearch} className="img-fluid" alt="" 
+                                                            />
+															<i className="fa fa-search" onClick={this.openSearch}></i>
+                                                        </div>
+													</li>
 													{/*Header Cart Component */}
 													<CartContainer/>
 												</ul>
@@ -129,10 +150,18 @@ class HeaderOne extends Component {
                             <div className="container">
                                 <div className="row">
                                     <div className="col-xl-12">
-                                        <form>
+                                        <form onSubmit={this.onSearchSubmit}>
                                             <div className="form-group">
-                                                <input type="text" className="form-control" id="exampleInputPassword1" placeholder="Search a Product" />
+                                                <input type="text" onChange={this.onSearchChange} className="form-control" id="exampleInputPassword1" placeholder="Recherche" />
                                             </div>
+                                            
+                                            {/* <div className="form-group">
+                                                <select className="form-control">
+                                                    <option>Veuilez choisir la categorie</option>
+                                                    <option>Abidjan</option>
+                                                    <option>Yamoussoukro</option>
+                                                </select>
+                                            </div> */}
                                             <button type="submit" className="btn btn-primary"><i className="fa fa-search"></i></button>
                                         </form>
                                     </div>
@@ -151,4 +180,4 @@ const mapStateToProps = (state) => ({
     auth: state.auth
 })
 
-export default connect(mapStateToProps, { changeCurrency })(HeaderOne);
+export default connect(mapStateToProps, { changeCurrency, logout })(HeaderOne);

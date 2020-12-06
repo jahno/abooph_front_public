@@ -66,7 +66,7 @@ function ProductListing(props){
                         <div className="row">
                             <div className="col-sm-12 text-center section-b-space mt-5 no-found" >
                                 <img src={`${process.env.PUBLIC_URL}/assets/images/empty-search.jpg`} className="img-fluid mb-4" />
-                                <h3>Désolé! Impossible de trouver les articles que vous cherchiez !!!    </h3>
+                                <h3>Désolé! Impossible de trouver les articles que vous cherchez !!!    </h3>
                                 <p>Veuillez vérifier si vous avez mal orthographié quelque chose ou essayez de chercher avec d'autres mots.</p>
                                 <Link to={`${process.env.PUBLIC_URL}/`} className="btn btn-solid">Continuer vos achats</Link>
                             </div>

@@ -122,7 +122,7 @@ class FooterFour extends Component {
                                             <li><i className="fa fa-phone"></i>Call Us: 123-456-7898</li>
                                             <li><i className="fa fa-envelope-o"></i>Email Us: <a
                                                 href="#">Support@Fiot.com</a></li>
-                                            <li><i className="fa fa-fax"></i>Fax: 123456</li>
+                                            <li><i className="fa fa-fax"></i>Fixe: 123456</li>
                                         </ul>
                                     </div>
                                 </div>

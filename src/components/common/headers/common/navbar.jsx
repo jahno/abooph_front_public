@@ -81,23 +81,23 @@ class NavBar extends Component {
                                 </Link>
                             </li>
                             <li >
-                                <Link to="#" className="nav-link" onClick={(e) => this.handleSubmenu(e)}>
+                                <Link to={{pathname: '/galerie', state:{category: ""}}} className="nav-link" onClick={(e) => this.handleSubmenu(e)}>
                                     Galerie
                                     <span className="sub-arrow"></span>
                                 </Link>
                                 <ul className="nav-submenu">
                                     <li>
-                                        <Link to={{pathname: '/galerie', state:"homme"}}>
+                                        <Link to={{pathname: '/galerie', state:{category: "homme"}}}>
                                             Homme
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to={{pathname: '/galerie', state:"femme"}}>
+                                        <Link to={{pathname: '/galerie', state:{category: "femme"}}}>
                                             Femme
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to={{pathname: '/galerie', state:"enfant"}}>
+                                        <Link to={{pathname: '/galerie', state:{category: "enfant"}}}>
                                             Enfant
                                         </Link>
                                     </li>

@@ -1,16 +1,17 @@
 import React, {useState, useEffect} from 'react';
+
 import { withTranslate } from 'react-redux-multilingual'
+import { useHistory } from 'react-router-dom';
 
-// Custom Components
 import HeaderOne from './common/headers/header-one';
-
 import FooterOne from "./common/footers/footer-one";
-
-// ThemeSettings
-import ThemeSettings from "./common/theme-settings"
+// import ThemeSettings from "./common/theme-settings"
 import { getCategories } from 'services/api';
 
+
 function App(props) {
+    const history = useHistory()
+
     const [state, setState] = useState({
         isLoading: true, 
         categories: [],
@@ -24,7 +25,7 @@ function App(props) {
 
     return (
         <div>
-            <HeaderOne categories={state.categories} logoName={'logo.png'}/>
+            <HeaderOne history={history} categories={state.categories} logoName={'logo.png'}/>
             {props.children}
             <FooterOne logoName={'logo.png'}/>
 

@@ -17,7 +17,7 @@ const initialState = {
     cities: []
 };
 
-function RegisterForm({signInUser}){
+function RegisterForm({signInUser, isAuthenticated}){
     const [state, setState] = useState(initialState)
 
     function handleValidSubmit(event, values){
@@ -48,6 +48,14 @@ function RegisterForm({signInUser}){
             )
         }
     };
+
+    // const location = useLocation()
+
+    // const {from} = location.state || {from: {pathname: "/mon-compte"}};
+
+    // if(isAuthenticated){
+    //     return <Redirect to={from}/>;
+    // } 
 
     return(
         <div className="theme-card">
@@ -136,22 +144,39 @@ function RegisterForm({signInUser}){
                     </div>
                 </div>
                 <div className="form-row">
-                    <div className="col-md-12">
+                    <div className="col-md-6">
                         <AvField 
                             label="Ville"
                             name="city" 
                             type="select" 
                             placeholder="Votre ville" 
                             validate={{
-                                required: {value: true, errorMessage: 'Svp veuillez renseigner votre adresse'},
+                                required: {value: true, errorMessage: 'Veuillez selectionner votre ville'},
                                 maxLength: {value: 50, errorMessage: "Votre prénom est trop long"}
                             }} 
                         >
+                            <option>Veuillez selectionner votre ville</option>
                             <option>Abidjan</option>
                             <option>Yamoussoukro</option>
                             <option>Daloa</option>
                             <option>Bouaké</option>
                             <option>San-Pedro</option>
+                        </AvField>
+                    </div>
+                    <div className="col-md-6">
+                        <AvField 
+                            label="Sexe"
+                            name="sexe" 
+                            type="select" 
+                            placeholder="Votre sexe" 
+                            validate={{
+                                required: {value: true, errorMessage: 'Veuillez selectionner votre sexe'},
+                                // maxLength: {value: 50, errorMessage: "Votre prénom est trop long"}
+                            }} 
+                        >
+                            <option>Veuillez selectionner votre sexe</option>
+                            <option>Masculin</option>
+                            <option>Feminin</option>
                         </AvField>
                     </div>
                 </div>

@@ -28,6 +28,8 @@ export default function ProductList(props){
         minPrice: 0
     })
 
+    const locationState = location.state || {searchValue: '', category: ''}
+
     useEffect(() => {
         getAllProducts().then(response => {
             let maxPrice = maxPriceRef.current = parseInt(response[1].results[0].prix)
@@ -55,10 +57,20 @@ export default function ProductList(props){
     }, [])
 
     useEffect(() => {
-        if(location.state && state.categories.findIndex(cat => location.state.toLowerCase() == cat.nom.toLowerCase()) != -1){
-            if(!state.currentParentCategory.nom || location.state.toLowerCase() != state.currentParentCategory.nom.toLowerCase()){
+        // Au cas ou il y a recherche
 
-                const currentParentCategory = state.categories.filter(cat => !cat.parent_id && (location.state.toLowerCase() == cat.nom.toLowerCase()))[0]
+        if(!state.currentParentCategory.nom && locationState.searchValue){
+            const searchValue = locationState.searchValue
+            setState(state => ({
+                ...state,
+                currentParentCategory: {},
+                currentChildCategories: [],
+                filteredProducts: state.allProducts.filter(item => item.nom.toLowerCase().includes(searchValue.toLowerCase())),
+            }))
+        }else if(locationState.category && state.categories.findIndex(cat => locationState.category.toLowerCase() == cat.nom.toLowerCase()) != -1){
+            if(!state.currentParentCategory.nom || locationState.category.toLowerCase() != state.currentParentCategory.nom.toLowerCase()){
+
+                const currentParentCategory = state.categories.filter(cat => !cat.parent_id && (locationState.category.toLowerCase() == cat.nom.toLowerCase()))[0]
               
                 setState(state => ({
                     ...state, 
@@ -75,7 +87,7 @@ export default function ProductList(props){
                 currentChildCategories: []
             }))
         }
-    }, [location.state, state.categories])
+    }, [locationState, state.categories])
 
     function selectParentCategory(category){
         if(category.id !== state.currentParentCategory.id){
@@ -129,9 +141,27 @@ export default function ProductList(props){
 
     function filterPrice({value}){
         
+        // s'il n' ya pas de categorie selectionne, la recherche se fait sur la liste des articles
+        if(!state.currentParentCategory.nom){
+            const searchValue = locationState.searchValue || ''
+            setState(state => {
+                const filteredProducts = state.allProducts.filter(item => item.nom.toLowerCase().includes(searchValue.toLowerCase()))
+                return {
+                    ...state,
+                    currentParentCategory: {},
+                    currentChildCategories: [],
+                    minPrice: value.min, 
+                    maxPrice: value.max,
+                    filteredProducts: filteredProducts.filter(product => product.prix >= value.min && product.prix <= value.max)
+                }
+            })
+
+            return;
+        }
+
         setState(state => {
             let filteredProducts = filterProducts(state.currentChildCategories)
-
+            
             return {
                 ...state,
                 minPrice: value.min, 

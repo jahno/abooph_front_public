@@ -120,7 +120,7 @@ function FooterOne(props){
                                         <li><i className="fa fa-phone"></i>Contact: 08745949</li>
                                         <li><i className="fa fa-envelope-o"></i>Email: <a
                                             href="#">abooph@gmail.com</a></li>
-                                        <li><i className="fa fa-fax"></i>Fax: 21202452</li>
+                                        <li><i className="fa fa-fax"></i>Fixe: 21202452</li>
                                     </ul>
                                 </div>
                             </div>
@@ -134,7 +134,7 @@ function FooterOne(props){
                     <div className="row">
                         <div className="col-xl-6 col-md-6 col-sm-12">
                             <div className="footer-end">
-                                <p><i className="fa fa-copyright" aria-hidden="true"></i> 2020 Abooph</p>
+                                <p>Copyright <i className="fa fa-copyright" aria-hidden="true"></i> 2020 Abooph  tous droits réservés</p>
                             </div>
                         </div>
                         <div className="col-xl-6 col-md-6 col-sm-12">

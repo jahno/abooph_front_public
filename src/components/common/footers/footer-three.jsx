@@ -61,7 +61,7 @@ class FooterThree extends Component {
                                         <li>Multikart Demo Store, Demo store India 345-659</li>
                                         <li>Call Us: 123-456-7898</li>
                                         <li>Email Us: <a href="#">Support@Fiot.com</a></li>
-                                        <li>Fax: 123456</li>
+                                        <li>Fixe: 123456</li>
                                     </ul>
                                 </div>
                             </div>

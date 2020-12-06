@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
+
+import NumberFormat from 'react-number-format'
 import {Helmet} from 'react-helmet'
 import { connect } from 'react-redux'
 import {Link} from 'react-router-dom'
-
 
 import Breadcrumb from "components/common/breadcrumb";
 import {getCartTotal} from "services";
 import {removeFromCart, incrementQty, decrementQty} from 'actions'
 import { PUBLIC_ROUTE } from 'constants/api';
+
 
 class cartComponent extends Component {
     render (){
@@ -63,7 +65,7 @@ class cartComponent extends Component {
                                                             </div>
                                                         </div>
                                                         <div className="col-xs-3">
-                                                            <h2 className="td-color">{item.prix} F</h2>
+                                                            <h2 className="td-color"><NumberFormat value={item.prix} displayType={"text"} thousandSeparator={" "}/> F</h2>
                                                         </div>
                                                         <div className="col-xs-3">
                                                             <h2 className="td-color">
@@ -74,7 +76,7 @@ class cartComponent extends Component {
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td><h2>{item.prix} F</h2></td>
+                                                <td><h2><NumberFormat value={item.prix} displayType={"text"} thousandSeparator={" "}/> F</h2></td>
                                                 <td>
                                                     <div className="qty-box">
                                                         <div className="input-group">
@@ -98,7 +100,7 @@ class cartComponent extends Component {
                                                         <i className="fa fa-times"></i>
                                                     </a>
                                                 </td>
-                                                <td><h2 className="td-color">{item.sum} F</h2></td>
+                                                <td><h2 className="td-color"><NumberFormat value={item.sum} displayType={"text"} thousandSeparator={" "}/> F</h2></td>
                                             </tr>
                                         </tbody> )
                                     })}
@@ -107,7 +109,7 @@ class cartComponent extends Component {
                                     <tfoot>
                                     <tr>
                                         <td>prix total:</td>
-                                        <td><h2>{total} F</h2></td>
+                                        <td><h2><NumberFormat value={total} displayType={"text"} thousandSeparator={" "}/> F</h2></td>
                                     </tr>
                                     </tfoot>
                                 </table>
@@ -115,7 +117,7 @@ class cartComponent extends Component {
                         </div>
                         <div className="row cart-buttons">
                             <div className="col-6">
-                                <Link to={`${process.env.PUBLIC_URL}/galerie`} className="btn btn-solid">acheter</Link>
+                                <Link to={`${process.env.PUBLIC_URL}/galerie`} className="btn btn-solid">continuer mes achats</Link>
                             </div>
                             <div className="col-6">
                                 <Link to={`${process.env.PUBLIC_URL}/caisse`} className="btn btn-solid">finaliser</Link>

@@ -26,10 +26,10 @@ function DashboardLayout(props) {
                 <li><a href="#">My Account</a></li>
                 <li><a href="#">Change Password</a></li>
                 <li className="last"><a href="#" onClick={logout}>Se déconnecter</a></li> */}
-            
-                <li><Link to={path}>Mon Copmte</Link></li>
+
                 <li><Link to={`${path}/commandes`}>Mes Commandes</Link></li>
-                <li className="last"><a href="#" onClick={logout}>Se déconnecter</a></li>
+                <li><Link to={path}>Mon Copmte</Link></li>
+                {/* <li className="last"><a href="#" onClick={logout}>Se déconnecter</a></li> */}
             </ul>
         </div>
     );

@@ -60,7 +60,7 @@ class Contact extends Component {
                                         <li>
                                             <div className="contact-icon">
                                                 <i className="fa fa-fax" aria-hidden="true"></i>
-                                                <h6>Fax</h6>
+                                                <h6>Fixe</h6>
                                             </div>
                                             <div className="media-body">
                                                 <p>21202452</p>
