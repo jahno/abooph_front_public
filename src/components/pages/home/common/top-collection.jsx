@@ -18,7 +18,7 @@ class TopCollection extends Component {
                 {/*Paragraph*/}
                 <div className="title1  section-t-space">
                     <h4>offre spéciale</h4>
-                    <h2 className="title-inner1">top collection</h2>
+                    <h2 className="title-inner1">En vogue en ce moment </h2>
                 </div>
                 {/*Paragraph End*/}
                 <section className="section-b-space p-t-0">

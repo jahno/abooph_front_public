@@ -6,10 +6,9 @@ import { Link} from 'react-router-dom';
 import {SlideUpDown} from "../../../services/script"
 import LogoImage from "../headers/common/logo"
 import { postNewsletter } from 'services/api'
-import ProductItem from 'components/pages/dressmaker-product-list/common/product-list-item';
+// import ProductItem from 'components/pages/dressmaker-product-list/common/product-list-item';
 
 function FooterOne(props){
-
     useEffect(() => {
         var contentwidth = window.innerWidth;
         if ((contentwidth) < 750) {

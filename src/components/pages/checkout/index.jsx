@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useEffect, useState} from 'react';
 
 import {Helmet} from 'react-helmet'
 import { connect } from 'react-redux'
@@ -9,13 +9,14 @@ import { toast } from 'react-toastify';
 import Breadcrumb from "components/common/breadcrumb";
 import {removeFromWishlist, initCart} from 'actions'
 import {getCartTotal} from "services";
+import {getShipping} from "services/api";
 import {handleFetch} from 'helpers';
 import { order } from 'constants/urls';
 import { useHistory } from 'react-router-dom';
-
+// import OrderSuccess from './success-page';
 
 const initialState = {
-    shipping: '1000',
+    shipping: 0,
     isLoading: false,
     defaultValues: {
         lastName: '',
@@ -47,8 +48,15 @@ function CheckOut(props){
             }
         }
 
-        return {...initialState, defaultValues}
+        return {...initialState, defaultValues, shippingPrices: {}}
     })
+
+    useEffect(() => {
+        getShipping((res) => {
+            console.log(res)
+            setState(state => ({...state, shippingPrices: res }));
+        })
+    }, [])
 
     function handleValidSubmit(event, values){
         if(values.password !== values.passwordConfirmation){
@@ -97,6 +105,15 @@ function CheckOut(props){
         const shipping = event.target.value
         setState(state => ({...state, shipping}))
     }
+
+    // return (
+    //     <OrderSuccess
+    //         transactionId={'TT24II98'} 
+    //         cartItems={cartItems} 
+    //         total={total} 
+    //         shipping={10000}
+    //     />
+    // )
 
     return (
         <div>
@@ -277,12 +294,12 @@ function CheckOut(props){
                                                         <li>livraison 
                                                             <div className="shipping" onChange={onChangeShippingValue}>
                                                                 <div className="shopping-option">
-                                                                    <input checked={state.shipping === '1000'} type="radio" name="shipping" id="standard-shipping" value='1000' style={{cursor: 'pointer'}}/>
-                                                                        <label htmlFor="standard-shipping" style={{cursor: 'pointer'}}>Standard</label>
+                                                                    <input checked={state.shipping == state.shippingPrices.prix_standard} type="radio" name="shipping" id="standard-shipping" value={state.shippingPrices.prix_standard} style={{cursor: 'pointer'}}/>
+                                                                        <label htmlFor="standard-shipping" style={{cursor: 'pointer'}}>Standard ({state.shippingPrices.prix_standard})</label>
                                                                 </div>
                                                                 <div className="shopping-option">
-                                                                    <input checked={state.shipping === '1500'} type="radio" name="shipping" id="express-shipping" value='1500' style={{cursor: 'pointer'}}/>
-                                                                        <label htmlFor="express-shipping" style={{cursor: 'pointer'}}>Express</label>
+                                                                    <input checked={state.shipping == state.shippingPrices.prix_express} type="radio" name="shipping" id="express-shipping" value={state.shippingPrices.prix_express} style={{cursor: 'pointer'}}/>
+                                                                        <label htmlFor="express-shipping" style={{cursor: 'pointer'}}>Express ({state.shippingPrices.prix_express})</label>
                                                                 </div>
                                                             </div>
                                                         </li>

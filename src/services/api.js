@@ -86,3 +86,13 @@ export function postNewsletter(data,sCallBack,eCallBack){
     const url = `${API_ROUTE}/user/newsletter`
     exeRequest(url,"POST",data,sCallBack,eCallBack)
 }
+
+export function sendMessage(data,sCallBack,eCallBack){
+    const url = `${API_ROUTE}/user/contact`
+    exeRequest(url,"POST",data,sCallBack,eCallBack)
+}
+
+export function getShipping(sCallBack,eCallBack){
+    const url = `${API_ROUTE}/user/public`
+    exeRequest(url,"GET",null,sCallBack,eCallBack)
+}

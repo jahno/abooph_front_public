@@ -43,11 +43,11 @@ function ProductListing(props){
                             next={fetchMoreItems}
                             hasMore={state.hasMoreItems}
                             loader={<div className="loading-cls"></div>}
-                            endMessage={
-                                <p className="seen-cls seen-it-cls">
-                                    <b>Yay! Vous avez tout vu</b>
-                                </p>
-                            }
+                            // endMessage={
+                            //     <p className="seen-cls seen-it-cls">
+                            //         <b>Yay! Vous avez tout vu</b>
+                            //     </p>
+                            // }
                         >
                             <div className="row">
                                 { products.slice(0, state.limit).map((product, index) =>
@@ -66,7 +66,7 @@ function ProductListing(props){
                         <div className="row">
                             <div className="col-sm-12 text-center section-b-space mt-5 no-found" >
                                 <img src={`${process.env.PUBLIC_URL}/assets/images/empty-search.jpg`} className="img-fluid mb-4" />
-                                <h3>Désolé! Impossible de trouver les articles que vous cherchez !!!    </h3>
+                                <h3>Désolé! Aucun article trouvé !!!    </h3>
                                 <p>Veuillez vérifier si vous avez mal orthographié quelque chose ou essayez de chercher avec d'autres mots.</p>
                                 <Link to={`${process.env.PUBLIC_URL}/`} className="btn btn-solid">Continuer vos achats</Link>
                             </div>

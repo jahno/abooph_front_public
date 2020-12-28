@@ -1,4 +1,10 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
+
+import { AvField, AvForm } from 'availity-reactstrap-validation';
+import { Button } from 'reactstrap';
+import { toast  } from 'react-toastify';
+
+import { sendMessage } from 'services/api'
 import Breadcrumb from "../common/breadcrumb";
 
 class Contact extends Component {
@@ -8,8 +14,6 @@ class Contact extends Component {
     }
 
     render (){
-
-
         return (
             <div>
                 <Breadcrumb title={'Contactez Nous'}/>
@@ -71,40 +75,10 @@ class Contact extends Component {
                                 </div>
                             </div>
                         </div>
+
                         <div className="row">
                             <div className="col-sm-12">
-                                <form className="theme-form">
-                                    <div className="form-row">
-                                        <div className="col-md-6">
-                                            <label htmlFor="name">Votre nom</label>
-                                            <input type="text" className="form-control" id="name"
-                                                   placeholder="Votre nom" required="" />
-                                        </div>
-                                        <div className="col-md-6">
-                                            <label htmlFor="email">Votre prénom</label>
-                                            <input type="text" className="form-control" id="last-name"
-                                                   placeholder="Votre prénom" required="" />
-                                        </div>
-                                        <div className="col-md-6">
-                                            <label htmlFor="review">Votre numero de téléphone</label>
-                                            <input type="text" className="form-control" id="review"
-                                                   placeholder="Votre numero de téléphone" required="" />
-                                        </div>
-                                        <div className="col-md-6">
-                                            <label htmlFor="email">Email</label>
-                                            <input type="text" className="form-control" id="email" placeholder="Email"
-                                                   required="" />
-                                        </div>
-                                        <div className="col-md-12">
-                                            <label htmlFor="review">Votre Message</label>
-                                            <textarea className="form-control" placeholder="Votre Message"
-                                                      id="exampleFormControlTextarea1" rows="6"></textarea>
-                                        </div>
-                                        <div className="col-md-12">
-                                            <button className="btn btn-solid" type="submit">Envoyer</button>
-                                        </div>
-                                    </div>
-                                </form>
+                                <ContactForm/>
                             </div>
                         </div>
                     </div>
@@ -113,6 +87,110 @@ class Contact extends Component {
             </div>
         )
     }
+}
+
+function ContactForm(){
+    const [isLoading, setIsLoading ] = useState(false)
+
+    // function handleChange(e){
+    //     const {value} = e.target
+    //     setState(state => ({...state, value}))
+    // }
+
+    function handleValidSubmit(e, values){
+       setIsLoading(true)
+
+       sendMessage(values, (res) => {
+            toast.success(res.msg)
+            setIsLoading(false)
+        }, (e) => {
+            toast.error("Une erreur s'est produite, veuillez réessayer")
+            setIsLoading(false)
+        }) 
+    }
+
+    return(
+        <AvForm className="theme-form" onValidSubmit={handleValidSubmit}>
+            <div className="form-row">
+                <div className="col-md-6">
+                    <AvField 
+                        className="form-control"
+                        label="Votre nom"
+                        name="nom" 
+                        type="text" 
+                        placeholder="Votre nom" 
+                        validate={{
+                            required: {value: true, errorMessage: 'Svp veuillez renseigner votre nom'},
+                            maxLength: {value: 50, errorMessage: "Votre nom est trop long"}
+                        }} 
+                    />
+                </div>
+                <div className="col-md-6">
+                    <AvField 
+                        className="form-control"
+                        label="Votre prénom"
+                        name="prenom" 
+                        type="text" 
+                        placeholder="Votre prénom" 
+                        validate={{
+                            required: {value: true, errorMessage: 'Svp veuillez renseigner votre prénom'},
+                            maxLength: {value: 50, errorMessage: "Votre prénom est trop long"}
+                        }} 
+                    />
+                </div>
+                <div className="col-md-6">
+                    <AvField 
+                        className="form-control"
+                        label="Téléphone"
+                        name="tel" 
+                        type="text" 
+                        placeholder="Votre téléphone" 
+                        validate={{
+                            required: {value: true, errorMessage: 'Svp veuillez renseigner votre numéro de téléphone'},
+                            pattern: {value: '^[0-9]{8}$', errorMessage: "Numéro invalide"},
+                        }} 
+                    />
+                </div>
+                <div className="col-md-6">
+                    <AvField 
+                        className="form-control"
+                        label="Votre email"
+                        name="email" 
+                        type="email" 
+                        placeholder="Votre email" 
+                        validate={{
+                            email: {value: true, errorMessage: "Votre email est invalide"},
+                            minLength: {value: 10, errorMessage: "Votre email est invalide"},
+                            maxLength: {value: 30, errorMessage: "Votre email est invalide"}
+                        }} 
+                    />
+                </div>
+                <div className="col-md-12">
+                    <AvField 
+                        className="form-control"
+                        label="Votre message"
+                        name="message" 
+                        type="textarea" 
+                        placeholder="Votre message" 
+                        validate={{
+                            required: {value: true, errorMessage: 'Svp veuillez renseigner votre message'},
+                        }} 
+                    />
+                </div>
+                <div className="col-md-12">
+                    <Button 
+                        className="btn btn-solid" 
+                        color="default"
+                        disabled={isLoading}
+                    >
+                        {isLoading ? "Veuillez patienter ..." : "Envoyer"}
+                    </Button>
+
+                    {/* <button className="btn btn-solid" type="submit">Envoyer</button> */}
+                </div>
+            </div>
+        </AvForm>
+    )
 }
 
 export default Contact
