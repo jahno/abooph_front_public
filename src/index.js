@@ -23,6 +23,7 @@ import PasswordReset from './components/pages/password-reset'
 import CheckOut from './components/pages/checkout'
 import Dashboard from './components/pages/dashboard'
 import Cart from './components/pages/cart'
+import OrderSuccess from 'components/pages/success-page';
 import PrivateRoute from "./components/common/private-route"
 
 import store from './store';
@@ -57,6 +58,7 @@ class Root extends React.Component {
 
                                 {/* private route */}
                                 <PrivateRoute path={`/caisse`} component={CheckOut}/>
+                                <PrivateRoute path={`/commande-envoyee`} component={OrderSuccess}/>
                                 <PrivateRoute path={`/mon-compte`} component={Dashboard}/>
                             </Layout>
                          </Switch>

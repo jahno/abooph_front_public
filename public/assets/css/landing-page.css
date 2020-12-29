@@ -25,7 +25,7 @@
   .landing-page-multikart h2 {
     font-weight: 100;
     font-size: 36px;
-    text-transform: capitalize;
+    text-transform: none;
     line-height: 1.5;
     font-family: 'Lora', serif; }
   .landing-page-multikart h3 {
@@ -86,7 +86,7 @@
     font-size: 20px;
     color: #000000;
     margin-bottom: 15px;
-    text-transform: capitalize;
+    text-transform: none;
     font-weight: 700; }
   .landing-page-multikart .btn {
     text-transform: uppercase;
@@ -137,7 +137,7 @@
       color: #ff4c3b;
       transition: all 0.5s ease; }
   .landing-page-multikart .navbar-light .navbar-nav .nav-item a {
-    text-transform: capitalize; }
+    text-transform: none; }
     .landing-page-multikart .navbar-light .navbar-nav .nav-item a.active {
       color: #ff4c3b;
       transition: all 0.5s ease; }
@@ -276,7 +276,7 @@
     font-weight: 400;
     font-size: 22px;
     position: relative;
-    text-transform: capitalize; }
+    text-transform: none; }
   .landing-page-multikart .color-varient {
     display: flex;
     padding-inline-start: 0px;
@@ -315,7 +315,7 @@
     .landing-page-multikart .feature_row .feature-content h6 {
       padding-left: 18px;
       font-weight: 600;
-      text-transform: capitalize;
+      text-transform: none;
       color: black; }
   .landing-page-multikart .demo-slider {
     position: relative;
@@ -402,7 +402,7 @@
       margin-top: 16px;
       color: black;
       text-align: center;
-      text-transform: capitalize; }
+      text-transform: none; }
     .landing-page-multikart .demo-box h6 {
       font-size: 14px;
       letter-spacing: 0.1em;
@@ -504,7 +504,7 @@
       .landing-page-multikart .support-section .support-content h4 {
         margin-top: 25px;
         font-size: 18px;
-        text-transform: capitalize;
+        text-transform: none;
         margin-bottom: 0;
         font-weight: 400; }
       .landing-page-multikart .support-section .support-content p {

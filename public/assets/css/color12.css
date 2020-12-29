@@ -86,7 +86,7 @@ h3 {
 
 h4 {
   font-size: 18px;
-  text-transform: capitalize;
+  text-transform: none;
   font-weight: 400;
   letter-spacing: 0.03em;
   line-height: 1;
@@ -958,7 +958,7 @@ r
   padding-right: 25px;
 }
 .top-header .header-dropdown li a {
-  text-transform: capitalize;
+  text-transform: none;
   color: #999999;
 }
 .top-header .header-dropdown li i {
@@ -1186,7 +1186,7 @@ r
   padding-bottom: 10px;
 }
 .main-menu .menu-right .icon-nav .onhover-div .show-div.shopping-cart li .total h5 {
-  text-transform: capitalize;
+  text-transform: none;
   margin-bottom: 0;
   color: #999999;
 }
@@ -1196,7 +1196,7 @@ r
 .main-menu .menu-right .icon-nav .onhover-div .show-div.shopping-cart li .buttons a {
   font-size: 16px;
   color: #333333;
-  text-transform: capitalize;
+  text-transform: none;
   font-weight: 700;
 }
 .main-menu .menu-right .icon-nav .onhover-div .show-div.shopping-cart li .buttons a:hover {
@@ -1213,7 +1213,7 @@ r
 }
 .main-menu .menu-right .icon-nav .onhover-div .show-div.setting h6 {
   font-size: 16px;
-  text-transform: capitalize;
+  text-transform: none;
   color: #333333;
   font-weight: 700;
   margin-bottom: 0;
@@ -1234,7 +1234,7 @@ r
   color: #333333;
   font-weight: 400;
   font-size: 16px;
-  text-transform: capitalize;
+  text-transform: none;
 }
 .main-menu .menu-right .icon-nav .onhover-div .show-div li {
   padding: 0;
@@ -1877,7 +1877,7 @@ r
   letter-spacing: 0.03em;
 }
 .service-block p {
-  text-transform: capitalize;
+  text-transform: none;
   margin-bottom: 0;
 }
 .service-block + .service-block {
@@ -2292,7 +2292,7 @@ r
 }
 .category-m .category-wrapper .category-link li {
   display: block;
-  text-transform: capitalize;
+  text-transform: none;
   margin-top: 5px;
 }
 .category-m .category-wrapper .category-link li:first-child {
@@ -3137,7 +3137,7 @@ r
   color: black;
   text-align: center;
   font-size: 18px;
-  text-transform: capitalize;
+  text-transform: none;
   width: 100%;
   padding: 5px 0;
   -webkit-transition: all 0.5s ease;
@@ -3215,7 +3215,7 @@ r
   color: white;
   text-align: center;
   font-size: 18px;
-  text-transform: capitalize;
+  text-transform: none;
   position: absolute;
   width: 100%;
   bottom: -40px;
@@ -3683,7 +3683,7 @@ r
 }
 .absolute_banner .collection-banner .absolute-contain h3 {
   color: #fe816d;
-  text-transform: capitalize;
+  text-transform: none;
   margin-top: -5px;
   font-weight: 700;
 }
@@ -4000,7 +4000,7 @@ r
   color: #272727;
   font-size: 18px;
   font-weight: 400;
-  text-transform: capitalize;
+  text-transform: none;
 }
 .theme-modal .modal-dialog .modal-content .modal-body .modal-bg .age-content form {
   margin: 0 auto;
@@ -4097,7 +4097,7 @@ r
 }
 .modal-dialog .modal-content .modal-body .modal-bg.addtocart #upsell_product .product-box .product-detail h6 {
   font-weight: 700;
-  text-transform: capitalize;
+  text-transform: none;
 }
 .modal-dialog .modal-content .modal-body .modal-bg.addtocart #upsell_product .product-box .product-detail h6 a {
   color: #fe816d;
@@ -4244,7 +4244,7 @@ r
 }
 .lookbook .lookbook-block .lookbook-dot .dot-showbox .dot-info h5 {
   margin-bottom: 0;
-  text-transform: capitalize;
+  text-transform: none;
   line-height: 20px;
 }
 .lookbook .lookbook-block .lookbook-dot .dot-showbox .dot-info h5.title {
@@ -4312,7 +4312,7 @@ r
   margin-bottom: 10px;
 }
 .about-section .service .service-block1 h5 {
-  text-transform: capitalize;
+  text-transform: none;
   font-weight: 700;
   margin-bottom: 0;
 }
@@ -4655,13 +4655,13 @@ footer.pet-layout-footer .social-white {
 }
 .blog.blog_box .blog-details a p {
   color: #40494f;
-  text-transform: capitalize;
+  text-transform: none;
   font-weight: 700;
   margin-bottom: 0;
   margin-top: 10px;
 }
 .blog.blog_box .blog-details .read-cls {
-  text-transform: capitalize;
+  text-transform: none;
   font-weight: 700;
   color: #000000;
 }
@@ -5153,7 +5153,7 @@ footer.pet-layout-footer .social-white {
 }
 .left-header .sidenav .bottom-section ul li a {
   font-size: 16px;
-  text-transform: capitalize;
+  text-transform: none;
   color: #222222;
 }
 .left-header .sidenav .bottom-section ul li a i {
@@ -5168,7 +5168,7 @@ footer.pet-layout-footer .social-white {
 }
 .left-header .sidenav .bottom-section .leftside_setting .language h5, .left-header .sidenav .bottom-section .leftside_setting .currency h5 {
   margin-bottom: 0;
-  text-transform: capitalize;
+  text-transform: none;
   color: #999;
   margin-top: 0;
 }
@@ -5176,7 +5176,7 @@ footer.pet-layout-footer .social-white {
   margin-left: 10px;
   border: none;
   outline: none;
-  text-transform: capitalize;
+  text-transform: none;
   color: #222222;
 }
 .left-header .sidenav .bottom-section .leftside_setting h5 {
@@ -5404,7 +5404,7 @@ footer.pet-layout-footer .social-white {
   margin: 20px 0;
 }
 .tools-parallax-product .tools-description .tools-form .search-box select {
-  text-transform: capitalize;
+  text-transform: none;
 }
 .tools-parallax-product .tools-description .tools-form .btn-find {
   width: 75%;
@@ -5766,7 +5766,7 @@ footer.pet-layout-footer .social-white {
   margin-bottom: 0;
 }
 .service_slide .service-home .service-block1 p {
-  text-transform: capitalize;
+  text-transform: none;
 }
 .service_slide .service-home .service-block1 svg {
   margin-bottom: 5px;
@@ -5800,7 +5800,7 @@ footer.pet-layout-footer .social-white {
   text-align: left;
 }
 .tab-left .theme-tab .left-side .tab-title a {
-  text-transform: capitalize;
+  text-transform: none;
 }
 .tab-left .theme-tab .left-side li {
   width: 100%;
@@ -6174,7 +6174,7 @@ footer p {
   position: relative;
   display: inherit;
   padding-top: 13px;
-  text-transform: capitalize;
+  text-transform: none;
   font-size: 14px;
   color: #777777;
 }
@@ -6352,7 +6352,7 @@ footer p {
 .footer-theme2 .footer-link li, .footer-theme2 .footer-link-b li {
   padding-right: 15px;
   padding-left: 15px;
-  text-transform: capitalize;
+  text-transform: none;
 }
 .footer-theme2 .footer-link a, .footer-theme2 .footer-link-b a {
   color: #7f786d;
@@ -6952,7 +6952,7 @@ footer p {
   margin-bottom: 30px;
 }
 .demo-section .demo-effects h4 {
-  text-transform: capitalize;
+  text-transform: none;
 }
 .demo-section .demo-effects .set-position {
   display: block;
@@ -7431,7 +7431,7 @@ footer p {
 .about-page h4 {
   margin-bottom: 10px;
   margin-top: 30px;
-  text-transform: capitalize;
+  text-transform: none;
   font-weight: 600;
   line-height: 1.3;
 }
@@ -7551,7 +7551,7 @@ footer p {
 }
 .collection-filter-block .product-service .media .media-body p {
   margin-bottom: 0;
-  text-transform: capitalize;
+  text-transform: none;
 }
 .collection-filter-block .product-service .media:last-child {
   padding-bottom: 0;
@@ -7766,7 +7766,7 @@ footer p {
 .collection-product-wrapper .product-top-filter .product-filter-content .search-count, .collection-product-wrapper .product-top-filter .product-filter-content .sidebar-popup, .collection-product-wrapper .product-top-filter .popup-filter .search-count, .collection-product-wrapper .product-top-filter .popup-filter .sidebar-popup {
   border-right: 1px solid #dddddd;
   padding: 20px;
-  text-transform: capitalize;
+  text-transform: none;
   width: 35%;
 }
 .collection-product-wrapper .product-top-filter .product-filter-content .search-count h5, .collection-product-wrapper .product-top-filter .product-filter-content .sidebar-popup h5, .collection-product-wrapper .product-top-filter .popup-filter .search-count h5, .collection-product-wrapper .product-top-filter .popup-filter .sidebar-popup h5 {
@@ -8146,7 +8146,7 @@ footer p {
   line-height: 1;
 }
 .login-page .theme-card .theme-form label {
-  text-transform: capitalize;
+  text-transform: none;
   color: #333333;
   font-size: 14px;
   font-weight: 600;
@@ -8187,7 +8187,7 @@ footer p {
   line-height: 1;
 }
 .register-page .theme-card .theme-form label {
-  text-transform: capitalize;
+  text-transform: none;
   color: #333333;
   font-size: 14px;
   font-weight: 600;
@@ -8258,7 +8258,7 @@ footer p {
   margin-top: -6px;
 }
 .contact-page .theme-form label {
-  text-transform: capitalize;
+  text-transform: none;
   color: #333333;
   font-size: 14px;
   font-weight: 600;
@@ -8361,7 +8361,7 @@ footer p {
   color: #777777;
   font-weight: 400;
   font-size: 14px;
-  text-transform: capitalize;
+  text-transform: none;
   margin-bottom: 0;
 }
 .cart-section tbody tr td a img, .cart-section tbody tr td p img, .wishlist-section tbody tr td a img, .wishlist-section tbody tr td p img {
@@ -8418,7 +8418,7 @@ footer p {
   width: 85%;
   font-size: 15px;
   padding-right: 10px;
-  text-transform: capitalize;
+  text-transform: none;
   font-weight: 700;
 }
 
@@ -8493,7 +8493,7 @@ footer p {
 .blog-detail-page .comment-section li h6 span {
   font-size: 13px;
   font-weight: 500;
-  text-transform: capitalize;
+  text-transform: none;
   color: #777777;
   margin-left: 20px;
 }
@@ -8506,7 +8506,7 @@ footer p {
   margin-top: -5px;
 }
 .blog-detail-page .blog-contact .theme-form label {
-  text-transform: capitalize;
+  text-transform: none;
   color: #333333;
   font-size: 16px;
   font-weight: 700;
@@ -8778,7 +8778,7 @@ footer p {
 }
 .product-right .product-title {
   color: #222222;
-  text-transform: capitalize;
+  text-transform: none;
   font-weight: 700;
   margin-bottom: 0;
 }
@@ -9218,7 +9218,7 @@ footer p {
   right: 10px;
   color: #333333;
   font-weight: 600;
-  text-transform: capitalize;
+  text-transform: none;
   opacity: 0;
 }
 .tab-product .product-box a, .product-full-tab .product-box a {
@@ -9258,7 +9258,7 @@ footer p {
   color: #333333;
   font-weight: 600;
   letter-spacing: 1px;
-  text-transform: capitalize;
+  text-transform: none;
 }
 .tab-product .product-box .product-details .price, .product-full-tab .product-box .product-details .price {
   padding-bottom: 10px;
@@ -9296,7 +9296,7 @@ footer p {
 }
 
 .checkout_class {
-  text-transform: capitalize;
+  text-transform: none;
 }
 
 .checkout-page .checkout-title {
@@ -9330,7 +9330,7 @@ footer p {
 }
 .checkout-page .checkout-form .form-group .field-label {
   line-height: 24px;
-  text-transform: capitalize;
+  text-transform: none;
   color: #333333;
   margin-bottom: 10px;
   font-weight: 700;
@@ -9513,7 +9513,7 @@ footer p {
 .payment-box .payment-options li .radio-option label {
   position: relative;
   padding-left: 30px;
-  text-transform: capitalize;
+  text-transform: none;
   color: #6f6f6f;
   cursor: pointer;
   font-weight: 600;
@@ -9649,7 +9649,7 @@ footer p {
 .dashboard .box-head h2 {
   font-size: 22px;
   margin: 20px 0 0;
-  text-transform: capitalize;
+  text-transform: none;
   color: #333;
 }
 .dashboard .box a {
@@ -9669,7 +9669,7 @@ footer p {
 .dashboard .box .box-title h3 {
   font-size: 16px;
   margin: 0;
-  text-transform: capitalize;
+  text-transform: none;
   color: #333;
 }
 .dashboard .box .box-title > a {
@@ -9718,18 +9718,18 @@ footer p {
 }
 .success-text p {
   font-size: 18px;
-  text-transform: capitalize;
+  text-transform: none;
 }
 
 .order-success-sec h4 {
   font-weight: 700;
-  text-transform: capitalize;
+  text-transform: none;
 }
 .order-success-sec .order-detail li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-transform: capitalize;
+  text-transform: none;
   line-height: 24px;
   font-size: 16px;
 }
@@ -9747,7 +9747,7 @@ footer p {
 }
 .delivery-sec h2, .delivery-sec h3 {
   color: #000000;
-  text-transform: capitalize;
+  text-transform: none;
 }
 
 .product-order h3 {
@@ -9771,11 +9771,11 @@ footer p {
 }
 .product-order .product-order-detail .order_detail h4 {
   margin-bottom: 5px;
-  text-transform: capitalize;
+  text-transform: none;
   font-weight: 700;
 }
 .product-order .product-order-detail .order_detail h5 {
-  text-transform: capitalize;
+  text-transform: none;
   margin-bottom: 0;
 }
 .product-order .total-sec {
@@ -9787,7 +9787,7 @@ footer p {
 .product-order .total-sec ul li {
   font-size: 18px;
   display: block;
-  text-transform: capitalize;
+  text-transform: none;
 }
 .product-order .total-sec ul li span {
   float: right;
@@ -9828,7 +9828,7 @@ footer p {
 }
 .compare-page .table-wrapper .table {
   border: 1px solid #eeeeee;
-  text-transform: capitalize;
+  text-transform: none;
   color: #222222;
 }
 .compare-page .table-wrapper .table .product-name {
@@ -9913,7 +9913,7 @@ footer p {
 }
 .compare-section .compare-part .img-secton a h5 {
   margin-bottom: 0;
-  text-transform: capitalize;
+  text-transform: none;
   margin-top: 10px;
 }
 .compare-section .compare-part .img-secton h5 {
@@ -12541,7 +12541,7 @@ body.dark {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   font-weight: 400;
-  text-transform: capitalize;
+  text-transform: none;
   color: #222222;
 }
 .pixelstrap .home-menu a img, .pixelstrap .feature-menu a img, .pixelstrap .category-menu a img, .pixelstrap .full-mega-menu a img, .pixelstrap .clothing-menu a img {
@@ -12958,7 +12958,7 @@ body.dark {
     border-radius: 0 !important;
     font-size: 16px;
     font-weight: 400;
-    text-transform: capitalize;
+    text-transform: none;
     padding: 5px 35px;
   }
   .pixelstrap ul a:hover:before, .pixelstrap ul a:hover:hover:before, .pixelstrap ul a:focus:hover:before, .pixelstrap ul a:active:hover:before, .pixelstrap ul a.highlighted:hover:before {
@@ -13045,7 +13045,7 @@ body.dark {
   }
 
   .layout3-menu .pixelstrap a {
-    text-transform: capitalize;
+    text-transform: none;
     padding-right: 34px;
     letter-spacing: 0.04em;
   }
@@ -15270,7 +15270,7 @@ body.dark {
   }
 
   .theme-tab .tab-title a, .theme-tab .tab-title2 a {
-    text-transform: capitalize;
+    text-transform: none;
   }
 
   .about-cls .service.border-section {

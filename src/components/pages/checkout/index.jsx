@@ -9,11 +9,10 @@ import { toast } from 'react-toastify';
 import Breadcrumb from "components/common/breadcrumb";
 import {removeFromWishlist, initCart} from 'actions'
 import {getCartTotal} from "services";
-import {getShipping} from "services/api";
+import {getOrderDetail, getShipping} from "services/api";
 import {handleFetch} from 'helpers';
 import { order } from 'constants/urls';
 import { useHistory } from 'react-router-dom';
-// import OrderSuccess from './success-page';
 
 const initialState = {
     shipping: 0,
@@ -53,7 +52,6 @@ function CheckOut(props){
 
     useEffect(() => {
         getShipping((res) => {
-            console.log(res)
             setState(state => ({...state, shippingPrices: res }));
         })
     }, [])
@@ -93,7 +91,10 @@ function CheckOut(props){
                     });
                     // setState(state => ({...state, isLoading: false, newProducts: response.results}))
                     initCart()
-                    history.push('/')
+
+                    getOrderDetail(response.commande, response => {
+                        history.push('/commande-envoyee', {order: response})
+                    })
                 },
                 () => setState(state => ({...state, isLoading: false})),
                 data
@@ -105,15 +106,6 @@ function CheckOut(props){
         const shipping = event.target.value
         setState(state => ({...state, shipping}))
     }
-
-    // return (
-    //     <OrderSuccess
-    //         transactionId={'TT24II98'} 
-    //         cartItems={cartItems} 
-    //         total={total} 
-    //         shipping={10000}
-    //     />
-    // )
 
     return (
         <div>

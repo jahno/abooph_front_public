@@ -48,9 +48,9 @@ function FooterOne(props){
                 <div className="container">
                     <div className="row footer-theme partition-f">
                         <div className="col-lg-4 col-md-6">
-                            <div className="footer-title footer-mobile-title">
+                            {/* <div className="footer-title footer-mobile-title">
                                 <h4>about</h4>
-                            </div>
+                            </div> */}
                             <div className="footer-contant">
                                 <div className="footer-logo">
                                     <LogoImage logo={props.logoName} />
